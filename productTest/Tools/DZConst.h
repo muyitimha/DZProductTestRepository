@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#ifdef DEBUG
+#define DZLog(...) NSLog(@"%s %d \n %@\n\n", __func__, __LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#else
+#define DZLog(...)
+#endif
+
 @interface DZConst : NSObject
 
 @end
